@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Jan, 2020 2:55:00 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Location" table="location" catalog="medifeedback">
+        <id name="locid" type="java.lang.Integer">
+            <column name="locid" />
+            <generator class="identity" />
+        </id>
+        <property name="city" type="string">
+            <column name="city" length="200" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="200" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

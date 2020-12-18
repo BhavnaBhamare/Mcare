@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Jan, 2020 2:55:00 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Patient" table="patient" catalog="medifeedback">
+        <id name="pid" type="string">
+            <column name="pid" length="200" />
+            <generator class="assigned" />
+        </id>
+        <property name="pname" type="string">
+            <column name="pname" length="200" />
+        </property>
+        <property name="ptype" type="string">
+            <column name="ptype" length="200" />
+        </property>
+        <property name="bedno" type="string">
+            <column name="bedno" length="200" />
+        </property>
+        <property name="doctor" type="string">
+            <column name="doctor" length="200" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="200" />
+        </property>
+        <property name="mobileno" type="string">
+            <column name="mobileno" length="20" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="200" />
+        </property>
+        <set name="feedbacks" table="feedback" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pid" length="200" />
+            </key>
+            <one-to-many class="com.pojo.Feedback" />
+        </set>
+    </class>
+</hibernate-mapping>

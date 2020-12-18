@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Jan, 2020 2:55:00 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Feedback" table="feedback" catalog="medifeedback">
+        <id name="feedid" type="java.lang.Integer">
+            <column name="feedid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="patient" class="com.pojo.Patient" fetch="select">
+            <column name="pid" length="200" />
+        </many-to-one>
+        <property name="status" type="string">
+            <column name="status" length="200" />
+        </property>
+        <property name="q1" type="string">
+            <column name="q1" length="200" />
+        </property>
+        <property name="q2" type="string">
+            <column name="q2" length="200" />
+        </property>
+        <property name="q3" type="string">
+            <column name="q3" length="200" />
+        </property>
+        <property name="q4" type="string">
+            <column name="q4" length="200" />
+        </property>
+        <property name="q5" type="string">
+            <column name="q5" length="200" />
+        </property>
+        <property name="q6" type="string">
+            <column name="q6" length="200" />
+        </property>
+        <property name="q7" type="string">
+            <column name="q7" length="200" />
+        </property>
+        <property name="q8" type="string">
+            <column name="q8" length="200" />
+        </property>
+        <property name="q9" type="string">
+            <column name="q9" length="200" />
+        </property>
+        <property name="q10" type="string">
+            <column name="q10" length="200" />
+        </property>
+        <property name="attendantname" type="string">
+            <column name="attendantname" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>
